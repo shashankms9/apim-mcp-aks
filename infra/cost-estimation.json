@@ -1,0 +1,892 @@
+{
+  "summary": {
+    "total_resources": 119,
+    "resource_types": 39,
+    "files_scanned": 38
+  },
+  "resources_by_type": {
+    "Microsoft.ApiManagement/service": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/apim/apim.bicep",
+          "name": "apimService",
+          "sku": {
+            "name": "apimSku",
+            "capacity": 1
+          },
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.ApiManagement/service/apis": {
+      "count": 2,
+      "instances": [
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthApi"
+        },
+        {
+          "file": "app/apim-mcp/mcp-api.bicep",
+          "name": "mcpApi"
+        }
+      ]
+    },
+    "Microsoft.ApiManagement/service/apis/operations": {
+      "count": 11,
+      "instances": [
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthAuthorizeOperation"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthTokenOperation"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthCallbackOperation"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthRegisterOperation"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthRegisterOptionsOperation"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthMetadataOptionsOperation"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthMetadataGetOperation"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthConsentGetOperation"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthConsentPostOperation"
+        },
+        {
+          "file": "app/apim-mcp/mcp-api.bicep",
+          "name": "mcpSseOperation"
+        },
+        {
+          "file": "app/apim-mcp/mcp-api.bicep",
+          "name": "mcpMessageOperation"
+        }
+      ]
+    },
+    "Microsoft.ApiManagement/service/apis/operations/policies": {
+      "count": 9,
+      "instances": [
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthAuthorizePolicy"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthTokenPolicy"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthCallbackPolicy"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthRegisterPolicy"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthRegisterOptionsPolicy"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthMetadataOptionsPolicy"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthMetadataGetPolicy"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthConsentGetPolicy"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "oauthConsentPostPolicy"
+        }
+      ]
+    },
+    "Microsoft.ApiManagement/service/apis/policies": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "app/apim-mcp/mcp-api.bicep",
+          "name": "mcpApiPolicy"
+        }
+      ]
+    },
+    "Microsoft.ApiManagement/service/namedValues": {
+      "count": 10,
+      "instances": [
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "encryptionKeyNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "encryptionIVNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "EntraIDTenantIdNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "EntraIDClientIdNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "EntraIdFicClientIdNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "OAuthCallbackUriNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "OAuthScopesNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "McpClientIdNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "APIMGatewayURLNamedValue"
+        },
+        {
+          "file": "app/apim-oauth/oauth.bicep",
+          "name": "MCPServerNamedValue"
+        }
+      ]
+    },
+    "Microsoft.Authorization/roleAssignments": {
+      "count": 11,
+      "instances": [
+        {
+          "file": "app/storage-Access.bicep",
+          "name": "storageRoleAssignment"
+        },
+        {
+          "file": "app/agent-RoleAssignments.bicep",
+          "name": "searchIndexDataContributorAgent"
+        },
+        {
+          "file": "app/agent-RoleAssignments.bicep",
+          "name": "searchServiceContributorAgent"
+        },
+        {
+          "file": "app/agent-RoleAssignments.bicep",
+          "name": "storageBlobDataOwnerAgent"
+        },
+        {
+          "file": "app/agent-RoleAssignments.bicep",
+          "name": "storageQueueDataContributorAgent"
+        },
+        {
+          "file": "app/agent-RoleAssignments.bicep",
+          "name": "openAIUserAgent"
+        },
+        {
+          "file": "app/agent-RoleAssignments.bicep",
+          "name": "openAIContributorAgent"
+        },
+        {
+          "file": "app/foundry-RoleAssignment.bicep",
+          "name": "roleAssignment"
+        },
+        {
+          "file": "core/acr/acr-role-assignment.bicep",
+          "name": "acrRoleAssignment"
+        },
+        {
+          "file": "core/search/search-role-assignment.bicep",
+          "name": "roleAssignment"
+        },
+        {
+          "file": "core/monitor/appinsights-access.bicep",
+          "name": "appInsightsRoleAssignment"
+        }
+      ]
+    },
+    "Microsoft.Bing/accounts": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/ai/foundry.bicep",
+          "name": "bingGrounding",
+          "sku": {
+            "name": "G1"
+          },
+          "properties": {
+            "location": "global"
+          }
+        }
+      ]
+    },
+    "Microsoft.CognitiveServices/accounts": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/ai/foundry.bicep",
+          "name": "foundryAccount",
+          "sku": {
+            "name": "S0"
+          },
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.CognitiveServices/accounts/capabilityHosts": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/ai/foundry.bicep",
+          "name": "agentsCapabilityHost"
+        }
+      ]
+    },
+    "Microsoft.CognitiveServices/accounts/deployments": {
+      "count": 2,
+      "instances": [
+        {
+          "file": "core/ai/foundry.bicep",
+          "name": "modelDeployment",
+          "sku": {
+            "name": "GlobalStandard",
+            "capacity": "modelCapacity"
+          }
+        },
+        {
+          "file": "core/ai/foundry.bicep",
+          "name": "embeddingModelDeployment",
+          "sku": {
+            "name": "Standard",
+            "capacity": "embeddingModelCapacity"
+          }
+        }
+      ]
+    },
+    "Microsoft.CognitiveServices/accounts/projects": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/ai/foundry.bicep",
+          "name": "defaultProject",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.CognitiveServices/accounts/projects/connections": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/ai/foundry.bicep",
+          "name": "bingConnection"
+        }
+      ]
+    },
+    "Microsoft.ContainerRegistry/registries": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/acr/container-registry.bicep",
+          "name": "containerRegistry",
+          "sku": {
+            "name": "sku"
+          },
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.ContainerService/managedClusters": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/aks/aks-cluster.bicep",
+          "name": "aksCluster",
+          "sku": {
+            "name": "Base",
+            "tier": "skuTier"
+          },
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.DocumentDB/databaseAccounts": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/cosmos-db/account.bicep",
+          "name": "account",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases": {
+      "count": 2,
+      "instances": [
+        {
+          "file": "app/lightning-cosmos.bicep",
+          "name": "lightningDatabase"
+        },
+        {
+          "file": "core/cosmos-db/nosql/database.bicep",
+          "name": "database"
+        }
+      ]
+    },
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers": {
+      "count": 7,
+      "instances": [
+        {
+          "file": "app/agents-approval-logicapp.bicep",
+          "name": "approvalsContainer"
+        },
+        {
+          "file": "app/lightning-cosmos.bicep",
+          "name": "episodesContainer"
+        },
+        {
+          "file": "app/lightning-cosmos.bicep",
+          "name": "rewardsContainer"
+        },
+        {
+          "file": "app/lightning-cosmos.bicep",
+          "name": "datasetsContainer"
+        },
+        {
+          "file": "app/lightning-cosmos.bicep",
+          "name": "trainingRunsContainer"
+        },
+        {
+          "file": "app/lightning-cosmos.bicep",
+          "name": "deploymentsContainer"
+        },
+        {
+          "file": "core/cosmos-db/nosql/container.bicep",
+          "name": "container"
+        }
+      ]
+    },
+    "Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments": {
+      "count": 4,
+      "instances": [
+        {
+          "file": "app/agents-approval-logicapp.bicep",
+          "name": "cosmosRoleAssignmentLogicApp"
+        },
+        {
+          "file": "app/cosmos-RoleAssignment.bicep",
+          "name": "cosmosRoleAssignment"
+        },
+        {
+          "file": "app/agent-RoleAssignments.bicep",
+          "name": "cosmosRoleAssignmentAgent"
+        },
+        {
+          "file": "core/cosmos-db/nosql/role/assignment.bicep",
+          "name": "assignment"
+        }
+      ]
+    },
+    "Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/cosmos-db/nosql/role/definition.bicep",
+          "name": "definition"
+        }
+      ]
+    },
+    "Microsoft.Fabric/capacities": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/fabric/fabric-capacity.bicep",
+          "name": "fabricCapacity",
+          "sku": {
+            "name": "skuName",
+            "tier": "Fabric"
+          },
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Insights/components": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/monitor/applicationinsights.bicep",
+          "name": "applicationInsights",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Logic/workflows": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "app/agents-approval-logicapp.bicep",
+          "name": "logicApp",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.ManagedIdentity/userAssignedIdentities": {
+      "count": 2,
+      "instances": [
+        {
+          "file": "core/identity/userAssignedIdentity.bicep",
+          "name": "userAssignedIdentity",
+          "properties": {
+            "location": "location"
+          }
+        },
+        {
+          "file": "core/apim/apim.bicep",
+          "name": "entraAppUserAssignedIdentity",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Network/privateDnsZones": {
+      "count": 10,
+      "instances": [
+        {
+          "file": "app/foundry-PrivateEndpoint.bicep",
+          "name": "cognitiveServicesPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/foundry-PrivateEndpoint.bicep",
+          "name": "openAIPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/foundry-PrivateEndpoint.bicep",
+          "name": "servicesAIPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/storage-PrivateEndpoint.bicep",
+          "name": "blobPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/storage-PrivateEndpoint.bicep",
+          "name": "queuePrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/cosmos-PrivateEndpoint.bicep",
+          "name": "cosmosPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "fabricDfsPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "fabricBlobPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "fabricApiPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "onelakeDfsPrivateDnsZone",
+          "properties": {
+            "location": "global"
+          }
+        }
+      ]
+    },
+    "Microsoft.Network/privateDnsZones/A": {
+      "count": 2,
+      "instances": [
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "onelakeDfsARecord"
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "onelakeBlobARecord"
+        }
+      ]
+    },
+    "Microsoft.Network/privateDnsZones/virtualNetworkLinks": {
+      "count": 10,
+      "instances": [
+        {
+          "file": "app/foundry-PrivateEndpoint.bicep",
+          "name": "cognitiveServicesPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/foundry-PrivateEndpoint.bicep",
+          "name": "openAIPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/foundry-PrivateEndpoint.bicep",
+          "name": "servicesAIPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/storage-PrivateEndpoint.bicep",
+          "name": "blobPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/storage-PrivateEndpoint.bicep",
+          "name": "queuePrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/cosmos-PrivateEndpoint.bicep",
+          "name": "cosmosPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "fabricDfsPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "fabricBlobPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "fabricApiPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "onelakeDfsPrivateDnsZoneVirtualNetworkLink",
+          "properties": {
+            "location": "global"
+          }
+        }
+      ]
+    },
+    "Microsoft.Network/privateEndpoints": {
+      "count": 5,
+      "instances": [
+        {
+          "file": "app/foundry-PrivateEndpoint.bicep",
+          "name": "foundryPrivateEndpoint",
+          "properties": {
+            "location": "location"
+          }
+        },
+        {
+          "file": "app/storage-PrivateEndpoint.bicep",
+          "name": "blobPrivateEndpoint",
+          "properties": {
+            "location": "location"
+          }
+        },
+        {
+          "file": "app/storage-PrivateEndpoint.bicep",
+          "name": "queuePrivateEndpoint",
+          "properties": {
+            "location": "location"
+          }
+        },
+        {
+          "file": "app/cosmos-PrivateEndpoint.bicep",
+          "name": "cosmosPrivateEndpoint",
+          "properties": {
+            "location": "location"
+          }
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "onelakePrivateEndpoint",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Network/privateEndpoints/privateDnsZoneGroups": {
+      "count": 5,
+      "instances": [
+        {
+          "file": "app/foundry-PrivateEndpoint.bicep",
+          "name": "foundryPrivateEndpointDnsZoneGroup"
+        },
+        {
+          "file": "app/storage-PrivateEndpoint.bicep",
+          "name": "blobPrivateDnsZoneGroupName"
+        },
+        {
+          "file": "app/storage-PrivateEndpoint.bicep",
+          "name": "queuePrivateDnsZoneGroupName"
+        },
+        {
+          "file": "app/cosmos-PrivateEndpoint.bicep",
+          "name": "cosmosPrivateDnsZoneGroup"
+        },
+        {
+          "file": "app/fabric-PrivateEndpoint.bicep",
+          "name": "onelakePrivateEndpointDnsZoneGroup"
+        }
+      ]
+    },
+    "Microsoft.Network/publicIPAddresses": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/network/public-ip.bicep",
+          "name": "publicIp",
+          "sku": {
+            "name": "sku",
+            "tier": "Regional"
+          },
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Network/virtualNetworks": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "app/vnet.bicep",
+          "name": "virtualNetwork",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.OperationalInsights/workspaces": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/monitor/loganalytics.bicep",
+          "name": "logAnalytics",
+          "sku": {
+            "name": "PerGB2018"
+          },
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Resources/deploymentScripts": {
+      "count": 3,
+      "instances": [
+        {
+          "file": "core/identity/agentIdentity.bicep",
+          "name": "agentIdentityScript",
+          "properties": {
+            "location": "location"
+          }
+        },
+        {
+          "file": "core/identity/aksFederatedCredential.bicep",
+          "name": "federatedCredentialScript",
+          "properties": {
+            "location": "location"
+          }
+        },
+        {
+          "file": "core/identity/agentIdentityBlueprint.bicep",
+          "name": "agentBlueprintScript",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Resources/resourceGroups": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "main.bicep",
+          "name": "rg",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Search/searchServices": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/search/search-service.bicep",
+          "name": "searchService",
+          "sku": {
+            "name": "sku"
+          },
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Storage/storageAccounts": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/storage/storage-account.bicep",
+          "name": "storage",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Web/connections": {
+      "count": 2,
+      "instances": [
+        {
+          "file": "app/agents-approval-logicapp.bicep",
+          "name": "cosmosDbConnection",
+          "properties": {
+            "location": "location"
+          }
+        },
+        {
+          "file": "app/agents-approval-logicapp.bicep",
+          "name": "teamsConnection",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Web/serverfarms": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/host/appserviceplan.bicep",
+          "name": "appServicePlan",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    },
+    "Microsoft.Web/sites": {
+      "count": 1,
+      "instances": [
+        {
+          "file": "core/host/functions-flexconsumption.bicep",
+          "name": "functions",
+          "properties": {
+            "location": "location"
+          }
+        }
+      ]
+    }
+  },
+  "key_parameters": {
+    "fabricSkuName": {
+      "type": "string",
+      "default": "F2",
+      "allowed_values": [
+        "F2",
+        "F4",
+        "F8",
+        "F16",
+        "F32",
+        "F64",
+        "F128",
+        "F256",
+        "F512",
+        "F1024",
+        "F2048"
+      ]
+    },
+    "embeddingModelCapacity": {
+      "type": "int",
+      "default": "10"
+    }
+  }
+}
