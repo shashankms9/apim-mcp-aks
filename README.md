@@ -138,6 +138,27 @@ python tests/test_apim_mcp_connection.py --use-az-token
 | [AGENTS_AGENT_LIGHTNING_TEST_RESULTS.md](docs/AGENTS_AGENT_LIGHTNING_TEST_RESULTS.md) | Lightning test results                           |
 | [AGENTS_EVALUATIONS.md](docs/AGENTS_EVALUATIONS.md)                                   | Agent evaluation framework                       |
 | [AGENTS_TEST_RESULTS.md](docs/AGENTS_TEST_RESULTS.md)                                 | Integration test results                         |
+| [COST-ESTIMATION.md](infra/COST-ESTIMATION.md)                                        | Infrastructure cost estimation report            |
+
+### Cost Estimation
+
+To estimate the cost of deploying this infrastructure, use the cost estimation script:
+
+```bash
+python3 scripts/extract_bicep_cost_info.py
+```
+
+This script scans all Bicep files in the `/infra` folder and generates:
+- **JSON Report** (`infra/cost-estimation.json`): Machine-readable resource inventory with SKU details
+- **Markdown Report** (`infra/COST-ESTIMATION.md`): Human-readable cost estimation report
+
+The reports include:
+- All Azure resources defined in Bicep templates
+- SKU information (name, tier, capacity)
+- Key cost-related parameters
+- Resource counts by type
+
+Use these reports with [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate deployment costs.
 
 ---
 
