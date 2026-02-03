@@ -152,7 +152,7 @@ def test_generated_files_exist():
 
 
 if __name__ == '__main__':
-    """Run tests when script is executed directly."""
+    # Run tests when script is executed directly
     print("Running cost estimation tests...")
     
     test_bicep_extractor_initialization()

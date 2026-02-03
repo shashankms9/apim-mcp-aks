@@ -345,8 +345,6 @@ class BicepResourceExtractor:
 
 def main():
     """Main entry point."""
-    import sys
-    
     # Determine infrastructure directory
     script_dir = Path(__file__).parent
     repo_root = script_dir.parent
